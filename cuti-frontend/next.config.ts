@@ -3,7 +3,7 @@ module.exports = {
     return [
       {
         source: "/login",
-        destination: "http://localhost:3000/login", // Adjust to your backend URL
+        destination: "http://localhost:8000/login", // This needs to be changed
       },
     ];
   },

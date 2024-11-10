@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -26,14 +28,14 @@ export function LoginForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          username: formData.get("username"), // Note: backend expects 'username', not 'email'
+          username: formData.get("username"),
           password: formData.get("password"),
         }),
-        credentials: "include", // Important for session handling
+        credentials: "include",
       });
 
       if (response.ok) {
-        window.location.href = "/"; // Redirect to dashboard on success
+        window.location.href = "/";
       } else {
         setError("Invalid email or password");
       }
